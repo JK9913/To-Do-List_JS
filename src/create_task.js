@@ -21,13 +21,10 @@ export default function createTask() {
       if (date === "") {
         console.log("Date cannot be empty");
         return;
-      } else if (date.length !== 10 && date[2] !== "." && date[5] !== ".") {
-        console.log("Date must be in the format dd.mm.yyyy");
-        return;
       }
 
-      const parsedDate = parseISO(date.split('.').reverse().join('-')); // Convert dd.mm.yyyy to yyyy-mm-dd
-      if (!isValid(parsedDate)) {
+      const parsedDate = parse(date, 'dd.MM.yyyy', new Date());
+      if (!isValid(parsedDate));{
       console.log("Invalid date");
       return;
      }
