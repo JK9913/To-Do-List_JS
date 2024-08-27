@@ -8,6 +8,7 @@ import {format, parseISO, addDays, isValid} from 'date-fns';
             this.title = title;
             this.description = description;
             this.tasks = [];
+            this.date = date;
         }
 
         get viewTitle() {
