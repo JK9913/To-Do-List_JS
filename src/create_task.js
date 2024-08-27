@@ -2,7 +2,6 @@ import _ from 'lodash';
 import './style.css';
 import {format, parseISO, addDays, isValid} from 'date-fns';
 
-export default function createTask() {
   // Write a class that creates to-do tasks and belong to the project variable
   class Task {
     constructor(title = "Placeholder title", description = "Please enter a description", dueDate = addDays(new Date(), 1), priority = 0, notes = "") {
@@ -24,7 +23,8 @@ export default function createTask() {
       }
 
       const parsedDate = parse(date, 'dd.MM.yyyy', new Date());
-      if (!isValid(parsedDate));{
+
+      if (!isValid(parsedDate)){
       console.log("Invalid date");
       return;
      }
@@ -71,5 +71,4 @@ export default function createTask() {
 
   }
 
-  return Task;
-} 
+  export default Task;
